@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Some Example</title>
+
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/css")
+    @RenderSection("Styles", false)
+</head>
+<body>
+    @RenderBody()
+
+    <script type="text/javascript">
+    window.baseUrl = '@Url.Content("~")';
+    </script>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/angular")
+    @*@Scripts.Render("~/bundles/angular-ui")*@
+    @*@Scripts.Render("~/bundles/libraries")*@
+    @Scripts.Render("~/bundles/app")
+    @RenderSection("scripts", false)
+</body>
+</html>
