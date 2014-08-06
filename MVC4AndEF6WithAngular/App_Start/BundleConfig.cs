@@ -19,8 +19,8 @@ namespace MVC4AndEF6WithAngular
                 "~/Scripts/angular-route.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
-                "~/Scripts/app/*.js"
-                //"~/Scripts/app/controllers/*.js",
+                "~/Scripts/app/*.js",
+                "~/Scripts/app/resources/*.js"
                 //"~/Scripts/app/services/*.js",
                 //"~/Scripts/app/directives/*.js"
                 ));
