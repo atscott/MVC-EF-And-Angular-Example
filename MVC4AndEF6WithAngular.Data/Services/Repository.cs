@@ -1,11 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Data.Entity;
 using System.Linq;
-using System.Web;
 
-namespace MVC4AndEF6WithAngular.Data.Services
+namespace InstiselDashboard.Data.Services
 {
-    public class Repository
+    public interface IRepository<out T> where T : class
     {
+        IQueryable<T> Query();
+    }
+
+    public class Repository<T> : IRepository<T> where T : class
+    {
+        private IDbSet<T> EntityContext { get; set; }
+
+        public Repository(DbContext dbContext)
+        {
+            EntityContext = dbContext.Set<T>();
+        }
+
+        public IQueryable<T> Query()
+        {
+            return EntityContext;
+        }
     }
 }
