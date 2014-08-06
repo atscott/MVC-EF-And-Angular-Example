@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using System.Linq;
 
-namespace InstiselDashboard.Data.Services
+namespace MVC4AndEF6WithAngular.Data.Services
 {
     public interface IRepository<out T> where T : class
     {

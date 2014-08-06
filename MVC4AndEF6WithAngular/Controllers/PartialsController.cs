@@ -13,5 +13,10 @@ namespace MVC4AndEF6WithAngular.Controllers
         {
             return PartialView("HomePartial");
         }
+
+        public ActionResult StudentPartial()
+        {
+            return PartialView("StudentPartial");
+        }
     }
 }

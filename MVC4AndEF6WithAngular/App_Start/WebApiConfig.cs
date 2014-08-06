@@ -10,9 +10,13 @@ namespace MVC4AndEF6WithAngular
         public static void Register(HttpConfiguration config)
         {
             config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
+                name: "api",
+                routeTemplate: "api/{controller}/{id}/{action}",
+                defaults: new
+                {
+                    id = RouteParameter.Optional,
+                    action = "default"
+                }
             );
 
             // Uncomment the following line of code to enable query support for actions with an IQueryable or IQueryable<T> return type.

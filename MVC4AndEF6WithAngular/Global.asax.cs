@@ -22,6 +22,8 @@ namespace MVC4AndEF6WithAngular
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            AutoMapperConfig.SetUp();
             AuthConfig.RegisterAuth();
         }
     }
