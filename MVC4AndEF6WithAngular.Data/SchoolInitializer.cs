@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using MVC4AndEF6WithAngular.Data.Contexts;
+﻿using MVC4AndEF6WithAngular.Data.Contexts;
 using MVC4AndEF6WithAngular.Data.Models;
+using System;
+using System.Collections.Generic;
 
 namespace MVC4AndEF6WithAngular.Data
 {

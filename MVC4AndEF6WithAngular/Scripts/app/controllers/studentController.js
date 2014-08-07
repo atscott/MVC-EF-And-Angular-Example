@@ -1,9 +1,5 @@
 ﻿angular.module('app')
-    .controller('studentController', ['StudentResource',
-        function (StudentResource) {
-            'use strict';
-
-            $scope.students = StudentResource.get();
-
-        }
-    ])
+    .controller('StudentController', ['$scope', 'Student',
+        function ($scope, Student) {
+            $scope.students = Student.get();
+        }])
