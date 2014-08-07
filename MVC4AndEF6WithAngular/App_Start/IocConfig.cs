@@ -29,8 +29,11 @@ namespace MVC4AndEF6WithAngular
                 .RegisterAssemblyTypes(typeof (SchoolContext).Assembly)
                 .AsImplementedInterfaces();
 
+            var connectionString =
+                System.Configuration.ConfigurationManager.ConnectionStrings["SchoolContext"].ConnectionString;
+
             builder
-                .Register(r => new SchoolContext("server=localhost;database=dbcontoso;uid=root;pwd=root"))
+                .Register(r => new SchoolContext(connectionString))
                 .As<DbContext>();
 
             builder
