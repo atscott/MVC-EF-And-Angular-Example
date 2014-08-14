@@ -2,3 +2,5 @@
 **/packages/*
 **/obj/*
 .idea/
+
+**/Properties/publishprofiles/
