@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC4AndEF6WithAngular", "MVC4AndEF6WithAngular\MVC4AndEF6WithAngular.csproj", "{E9561B69-7C81-427D-8075-88849A0535DC}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC4AndEF6WithAngular.Data.Tests", "MVC4AndEF6WithAngular.Data.Tests\MVC4AndEF6WithAngular.Data.Tests.csproj", "{AFACF5D7-BD83-45B6-B1AD-DAE5060F144C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC4AndEF6WithAngular.Tests", "MVC4AndEF6WithAngular.Tests\MVC4AndEF6WithAngular.Tests.csproj", "{B9EE9D5E-5AE2-41C6-B865-8FF0A3BBFC6F}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SQLDatabaseProj", "SQLDatabaseProj\SQLDatabaseProj.sqlproj", "{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,12 @@ Global
 		{B9EE9D5E-5AE2-41C6-B865-8FF0A3BBFC6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9EE9D5E-5AE2-41C6-B865-8FF0A3BBFC6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9EE9D5E-5AE2-41C6-B865-8FF0A3BBFC6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BBD7B1E-25D1-470F-BAD3-DCF01A57C80F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
