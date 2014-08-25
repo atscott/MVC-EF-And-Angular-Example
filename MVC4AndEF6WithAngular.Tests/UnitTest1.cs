@@ -3,8 +3,10 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using MVC4AndEF6WithAngular.Controllers.API;
+using MVC4AndEF6WithAngular.Data;
 using MVC4AndEF6WithAngular.Data.Models;
 using MVC4AndEF6WithAngular.Data.Services;
+using MVC4AndEF6WithAngular.Models;
 using Ploeh.AutoFixture;
 
 namespace MVC4AndEF6WithAngular.Tests
@@ -18,7 +20,7 @@ namespace MVC4AndEF6WithAngular.Tests
         private StudentController _target;
 
         [TestInitialize]
-        public void BeforeEach()
+        public void StudenControllerTests()
         {
             _fixture = new Fixture();
 
@@ -46,7 +48,7 @@ namespace MVC4AndEF6WithAngular.Tests
         {
             _mockStudentService
                 .Setup(s => s.GetStudents())
-                .Returns(_fixture.CreateMany<Student>(3).AsQueryable());
+                .Returns(_fixture.CreateMany<StudentDto>(3).ToList());
 
             var actual = _target.Get();
 

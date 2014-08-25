@@ -3,9 +3,10 @@ using System.Linq;
 
 namespace MVC4AndEF6WithAngular.Data.Services
 {
-    public interface IRepository<out T> where T : class
+    public interface IRepository<T> where T : class
     {
         IQueryable<T> Query();
+        IDbSet<T> Get();
     }
 
     public class Repository<T> : IRepository<T> where T : class
@@ -18,6 +19,11 @@ namespace MVC4AndEF6WithAngular.Data.Services
         }
 
         public IQueryable<T> Query()
+        {
+            return EntityContext;
+        }
+
+        public IDbSet<T> Get()
         {
             return EntityContext;
         }

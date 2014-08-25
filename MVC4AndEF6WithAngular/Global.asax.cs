@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using MVC4AndEF6WithAngular.Data;
 
 namespace MVC4AndEF6WithAngular
 {

@@ -19,11 +19,7 @@ namespace MVC4AndEF6WithAngular.Controllers.API
         [ActionName("default")]
         public IList<StudentDto> Get()
         {
-            var students = _studentService.GetStudents();
-
-            var studentDtos = students.Select(Mapper.Map<StudentDto>).ToList();
-
-            return studentDtos;
+            return _studentService.GetStudents();
         } 
     }
 }
