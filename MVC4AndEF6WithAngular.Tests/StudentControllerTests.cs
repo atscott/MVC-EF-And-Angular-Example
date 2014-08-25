@@ -1,13 +1,12 @@
-﻿using System;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using MVC4AndEF6WithAngular.Controllers.API;
 using MVC4AndEF6WithAngular.Data;
-using MVC4AndEF6WithAngular.Data.Dtos;
-using MVC4AndEF6WithAngular.Data.Models;
 using MVC4AndEF6WithAngular.Data.Services;
+using MVC4AndEF6WithAngular.Models;
 using Ploeh.AutoFixture;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MVC4AndEF6WithAngular.Tests
 {
@@ -20,7 +19,7 @@ namespace MVC4AndEF6WithAngular.Tests
         private StudentController _target;
 
         [TestInitialize]
-        public void BeforeEach()
+        public void StudenControllerTests()
         {
             _fixture = new Fixture();
 
@@ -38,6 +37,10 @@ namespace MVC4AndEF6WithAngular.Tests
         [TestMethod]
         public void Get_WhenNoStudents_ReturnsEmptyListOfDtos()
         {
+            _mockStudentService
+                .Setup(s => s.GetStudents())
+                .Returns(new List<StudentDto>());
+
             var actual = _target.Get();
 
             Assert.AreEqual(0, actual.Count);
