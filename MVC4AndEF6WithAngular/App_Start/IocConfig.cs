@@ -34,11 +34,7 @@ namespace MVC4AndEF6WithAngular
 
             builder
                 .Register(r => new SchoolContext(connectionString))
-                .As<DbContext>();
-
-            builder
-                .RegisterGeneric(typeof (Repository<>))
-                .As(typeof (IRepository<>));
+                .As<ISchoolContext>();
 
             builder
                 .RegisterControllers(Assembly.GetExecutingAssembly());

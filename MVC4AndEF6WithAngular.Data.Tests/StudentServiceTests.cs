@@ -3,6 +3,7 @@ using System.Linq;
 using FakeDbSet;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using MVC4AndEF6WithAngular.Data.Contexts;
 using MVC4AndEF6WithAngular.Data.Models;
 using MVC4AndEF6WithAngular.Data.Services;
 using Ploeh.AutoFixture;
@@ -12,7 +13,6 @@ namespace MVC4AndEF6WithAngular.Data.Tests
     [TestClass]
     public class StudentServiceTests
     {
-        private Mock<IRepository<Student>> _mockRepository;
         private StudentService _target;
         private Fixture _fixture;
         private InMemoryDbSet<Student> _inMemoryDbSet;
@@ -30,13 +30,13 @@ namespace MVC4AndEF6WithAngular.Data.Tests
             _fixture.Behaviors.Add(new OmitOnRecursionBehavior());
 
             _inMemoryDbSet = new InMemoryDbSet<Student>();
-            _mockRepository = new Mock<IRepository<Student>>();
 
-            _mockRepository
-                .Setup(s => s.Get())
+            var mockContext = new Mock<ISchoolContext>();
+            mockContext
+                .Setup(s => s.Students)
                 .Returns(_inMemoryDbSet);
 
-            _target = new StudentService(_mockRepository.Object);
+            _target = new StudentService(mockContext.Object);
 
         }
 
