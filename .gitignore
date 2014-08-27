@@ -2,6 +2,6 @@
 **/packages/*
 **/obj/*
 .idea/
-
+*.ncrunchproject
 **/Properties/publishprofiles/
 MVC4AndEF6WithAngular/Web.config
