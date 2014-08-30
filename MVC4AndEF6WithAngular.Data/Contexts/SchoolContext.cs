@@ -10,7 +10,7 @@ namespace MVC4AndEF6WithAngular.Data.Contexts
         IDbSet<Enrollment> Enrollments { get; set; } 
 
     }
-    public class SchoolContext : DbContext
+    public class SchoolContext : DbContext, ISchoolContext
     {
         public IDbSet<Course> Courses { get; set; } 
         public IDbSet<Student> Students { get; set; } 

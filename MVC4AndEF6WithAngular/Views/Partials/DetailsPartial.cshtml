@@ -1,0 +1,47 @@
+﻿@model MVC4AndEF6WithAngular.Data.Dtos.StudentDetailsDto
+<div data-ng-controller="DetailsCtrl">
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstMidName)
+        </dt>
+        <dd>
+            {{student.FirstMidName}}
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            {{student.LastName}}
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EnrollmentDate)
+        </dt>
+
+        <dd>
+            {{student.EnrollmentDate}}
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Enrollments)
+        </dt>
+        <dd>
+            <table class="table">
+                <tr>
+                    <th>Course Title</th>
+                    <th>Grade</th>
+                </tr>
+                <tr data-ng-repeat="enrollment in student.Enrollments">
+                    <td>
+                        {{enrollment.CourseTitle}}
+                    </td>
+                    <td>
+                        {{enrollment.Grade}}
+                    </td>
+                </tr>
+            </table>
+        </dd>
+    </dl>
+</div>
+@*<p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@

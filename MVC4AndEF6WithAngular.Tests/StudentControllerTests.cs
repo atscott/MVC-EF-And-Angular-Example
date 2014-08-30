@@ -2,6 +2,7 @@
 using Moq;
 using MVC4AndEF6WithAngular.Controllers.API;
 using MVC4AndEF6WithAngular.Data;
+using MVC4AndEF6WithAngular.Data.Dtos;
 using MVC4AndEF6WithAngular.Data.Services;
 using MVC4AndEF6WithAngular.Models;
 using Ploeh.AutoFixture;
@@ -16,7 +17,7 @@ namespace MVC4AndEF6WithAngular.Tests
 
         private Fixture _fixture;
         private Mock<IStudentService> _mockStudentService;
-        private StudentController _target;
+        private StudentsController _target;
 
         [TestInitialize]
         public void StudenControllerTests()
@@ -29,7 +30,7 @@ namespace MVC4AndEF6WithAngular.Tests
 
             _mockStudentService = new Mock<IStudentService>();
 
-            _target = new StudentController(_mockStudentService.Object);
+            _target = new StudentsController(_mockStudentService.Object);
 
             AutoMapperConfig.SetUp();
         }
