@@ -1,7 +1,6 @@
 ﻿CREATE TABLE [dbo].[tblCourse] (
-    [Id]      INT           NOT NULL,
+    [Id]      INT           PRIMARY KEY,
     [Title]   VARCHAR (100) DEFAULT ('') NOT NULL,
-    [Credits] INT           NOT NULL,
-    PRIMARY KEY CLUSTERED ([Id] ASC)
+    [Credits] INT           NOT NULL
 );
 

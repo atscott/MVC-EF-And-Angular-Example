@@ -2,15 +2,15 @@
 <SchemaComparison>
   <Version>10</Version>
   <SourceModelProvider>
-    <ConnectionBasedModelProvider>
-      <ConnectionString>Data Source=atscott.database.windows.net,1433;Initial Catalog=atscott-razor-angular-demo_db;Persist Security Info=True;User ID=atscott@atscott;Pooling=False</ConnectionString>
-    </ConnectionBasedModelProvider>
-  </SourceModelProvider>
-  <TargetModelProvider>
     <ProjectBasedModelProvider>
       <ProjectGuid>{8bbd7b1e-25d1-470f-bad3-dcf01a57c80f}</ProjectGuid>
       <Name>SQLDatabaseProj</Name>
     </ProjectBasedModelProvider>
+  </SourceModelProvider>
+  <TargetModelProvider>
+    <ConnectionBasedModelProvider>
+      <ConnectionString>Data Source=atscott.database.windows.net,1433;Initial Catalog=atscott-razor-angular-demo_db;Persist Security Info=True;User ID=atscott@atscott;Pooling=False</ConnectionString>
+    </ConnectionBasedModelProvider>
   </TargetModelProvider>
   <SchemaCompareSettingsService>
     <SchemaCompareSettingsService>

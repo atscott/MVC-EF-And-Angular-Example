@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MVC4AndEF6WithAngular.Data.Models
@@ -7,6 +8,7 @@ namespace MVC4AndEF6WithAngular.Data.Models
     [Table("tblstudent")]
     public class Student
     {
+        [Key]
         public int Id { get; set; }
         public string LastName { get; set; }
         public string FirstMidName { get; set; }
