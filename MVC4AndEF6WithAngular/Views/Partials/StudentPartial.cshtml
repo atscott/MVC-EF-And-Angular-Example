@@ -1,16 +1,17 @@
-﻿<div data-ng-controller="StudentCtrl">
+﻿@model MVC4AndEF6WithAngular.Data.Dtos.StudentDto
+<div data-ng-controller="StudentCtrl">
     <div class="col-xs-6">
         <table class="table table-responsive table-striped">
             <thead>
                 <tr>
                     <th>
-                        Last Name
+                        @Html.DisplayNameFor(model => model.LastName)
                     </th>
                     <th>
-                        First Name, MI
+                        @Html.DisplayNameFor(model => model.FirstMidName)
                     </th>
                     <th>
-                        Enrollment Date
+                        @Html.DisplayNameFor(model => model.EnrollmentDate)
                     </th>
                     <th></th>
                 </tr>
@@ -27,9 +28,9 @@
                         {{student.EnrollmentDate}}
                     </td>
                     <td>
-                        <a href="/#/edit/{{student.Id}}">Edit</a> | 
-                        <a href="/#/details/{{student.Id}}">Details</a> | 
-                        <a href="/#/delete/{{student.Id}}">Delete</a> 
+                        <a href="/#/edit/{{student.Id}}">Edit</a> |
+                        <a href="/#/details/{{student.Id}}">Details</a> |
+                        <a href="/#/delete/{{student.Id}}">Delete</a>
                     </td>
                 </tr>
             </tbody>

@@ -298,6 +298,7 @@
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\controllers\DetailsCtrl.js" />
     <Content Include="Scripts\app\controllers\StudentCtrl.js" />
+    <Content Include="Scripts\app\filters\GradeFilter.js" />
     <Content Include="Scripts\app\Resources\StudentResource.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
