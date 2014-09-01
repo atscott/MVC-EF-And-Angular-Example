@@ -15,6 +15,6 @@ namespace MVC4AndEF6WithAngular.Data.Dtos
         public string LastName { get; set; }
 
         [DisplayName(@"Enrollment Date")]
-        public DateTime EnrollmentDate { get; set; }
+        public DateTime? EnrollmentDate { get; set; }
     }
 }

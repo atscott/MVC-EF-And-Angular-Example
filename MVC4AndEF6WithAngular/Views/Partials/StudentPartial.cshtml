@@ -1,7 +1,7 @@
 ﻿@model MVC4AndEF6WithAngular.Data.Dtos.StudentDto
 <div data-ng-controller="StudentCtrl">
-    <div class="col-xs-6">
-        <table class="table table-responsive table-striped">
+    <div class="col-xs-12">
+        <table class="table table-responsive table-striped table-hover">
             <thead>
                 <tr>
                     <th>
@@ -28,9 +28,9 @@
                         {{student.EnrollmentDate}}
                     </td>
                     <td>
-                        <a href="/#/edit/{{student.Id}}">Edit</a> |
-                        <a href="/#/details/{{student.Id}}">Details</a> |
-                        <a href="/#/delete/{{student.Id}}">Delete</a>
+                        <a href="/#/student/edit/{{student.Id}}">Edit</a> |
+                        <a href="/#/student/details/{{student.Id}}">Details</a> |
+                        <a href="/#/student/delete/{{student.Id}}">Delete</a>
                     </td>
                 </tr>
             </tbody>

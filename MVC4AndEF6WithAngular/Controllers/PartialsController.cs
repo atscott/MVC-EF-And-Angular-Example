@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using MVC4AndEF6WithAngular.Data.Dtos;
 
 namespace MVC4AndEF6WithAngular.Controllers
 {
@@ -16,12 +17,17 @@ namespace MVC4AndEF6WithAngular.Controllers
 
         public ActionResult StudentPartial()
         {
-            return PartialView("StudentPartial");
+            return PartialView("StudentPartial", new StudentDto());
         }
 
         public ActionResult DetailsPartial()
         {
-            return PartialView("DetailsPartial");
+            return PartialView("DetailsPartial", new StudentDetailsDto());
+        }
+
+        public ActionResult CreatePartial()
+        {
+            return PartialView("CreatePartial",new StudentDto());
         }
     }
 }

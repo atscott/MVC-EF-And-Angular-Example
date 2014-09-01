@@ -1,0 +1,21 @@
+﻿@model MVC4AndEF6WithAngular.Data.Dtos.StudentDto
+<legend class="col-xs-12">
+    Create Student
+</legend>
+<div class="col-xs-8 col-md-6 col-lg-4">
+    <form>
+        <div class="form-group">
+            @Html.LabelFor(model => model.LastName, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.FirstMidName, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.FirstMidName, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.EnrollmentDate, new { @class = "control-label" })
+            @Html.TextBoxFor(model => model.EnrollmentDate, new { @class = "form-control" })
+        </div>
+        <button type="submit" class="btn btn-default">Create</button>
+    </form>
+</div>
